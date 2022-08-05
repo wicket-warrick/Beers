@@ -10,9 +10,19 @@ export const CatalogueBeer = () => {
     abv_gt: 0,
     ibu_lt: 200,
     ibu_gt: 0,
+    malt: "",
   });
   const updateSearchParams = (e) => {
     setSearchParams({ ...searchParams, [e.target.id]: e.target.value });
+  };
+  const beerOrder = (e) => {
+    const order = e.split(" ");
+    console.log(order);
+    setSearchParams({
+      ...searchParams,
+      orderBy: order[0],
+      direction: order[1],
+    });
   };
 
   useEffect(() => {
@@ -28,11 +38,13 @@ export const CatalogueBeer = () => {
   }, [searchParams]);
   return (
     <>
-      <SearchBar params={[searchParams, updateSearchParams]}></SearchBar>
+      <SearchBar
+        params={[searchParams, updateSearchParams, beerOrder]}
+      ></SearchBar>
       {beers ? (
-        <BeerList beers={beers} />
+        <BeerList beers={beers} params={searchParams} />
       ) : (
-        <h2>Not beers found with the current search parameters</h2>
+        <h2>Connecting...</h2>
       )}
     </>
   );
