@@ -4,7 +4,7 @@ import { BeerList } from "../../components/BeerList/BeerList";
 import { SearchBar } from "../../components/SearchBar/SearchBar";
 import {
   BeerFormDataContext,
-  useBeers,
+  
 } from "../../context/BeerFormDataProvider";
 import { getBeers } from "../../services";
 
