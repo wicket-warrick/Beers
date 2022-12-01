@@ -1,0 +1,43 @@
+@charset "utf-8";
+$card-header-padding:0rem;
+$section-padding:1.5rem 2rem;
+$input-hover-border-color:#F6C101;
+$control-padding-horizontal:1.5rem;
+$card-header-padding:1rem;
+$card-content-padding:1rem;
+
+@import "../node_modules/bulma/bulma.sass";
+
+.content figure{
+    margin:auto;
+}
+.carousel{
+    margin: 2rem auto;
+    
+}
+.column{
+    padding: 0.75rem 1.5rem;
+}
+
+.selectors{
+    width: 130px;
+}
+
+li.beer>article>div.card-image{
+    width: 55%;
+    margin:0 auto;
+}
+
+li.beer>article{
+    width:85%;
+    margin:0 auto
+}
+
+.searcher{
+    position:sticky;
+}
+
+.damian{
+    background-color: yellow;
+    font-size: 50px;
+}

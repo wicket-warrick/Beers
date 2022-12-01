@@ -1,7 +1,10 @@
+import { Card } from "../../components/BeerCard/BeerCard";
+
+
 export const BeerList = ({ beers, params }) => {
-  console.log(beers);
+
   return (
-    <ul>
+    <ul >
       {beers.length ? (
         beers
           .sort((a, b) =>
@@ -11,10 +14,8 @@ export const BeerList = ({ beers, params }) => {
           )
           .map((beer) => {
             return (
-              <li className="beer" key={beer.id}>
-                <h2>{beer.name}</h2>
-                <img src={beer.image_url} alt={beer.name} />
-                <p>{beer.description}</p>
+              <li className="beer content" key={beer.id}>
+                <Card beer={beer}></Card>
               </li>
             );
           })
