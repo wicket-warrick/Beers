@@ -18,6 +18,9 @@ export const Contact = () => {
           <li>enlace a linkedin</li>
         </ul>
       </article>
+      <button className="damian">
+        o boton que quere damian
+      </button>
     </section>
   );
 };

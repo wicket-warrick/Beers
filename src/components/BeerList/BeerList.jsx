@@ -1,7 +1,14 @@
 import { Card } from "../../components/BeerCard/BeerCard";
+<<<<<<< HEAD
 export const BeerList = ({ beers, params }) => {
+=======
+
+
+export const BeerList = ({ beers, params }) => {
+
+>>>>>>> 258bab15d0b074e1d421711400f97da538188def
   return (
-    <ul>
+    <ul >
       {beers.length ? (
         beers
           .sort((a, b) =>
@@ -11,7 +18,11 @@ export const BeerList = ({ beers, params }) => {
           )
           .map((beer) => {
             return (
+<<<<<<< HEAD
               <li className="beer" key={beer.id}>
+=======
+              <li className="beer content" key={beer.id}>
+>>>>>>> 258bab15d0b074e1d421711400f97da538188def
                 <Card beer={beer}></Card>
               </li>
             );
