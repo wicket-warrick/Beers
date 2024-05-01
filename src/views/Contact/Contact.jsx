@@ -8,6 +8,7 @@ export const Contact = () => {
         <h2>Hugo Suárez</h2>
         <ul>
           <li>Full Stack JavaScript Web Developer/mechanic Engineer</li>
+
           <li>
             <a href="mailto:hugolgsuarez@gmail.com?Subject=Perfil%20Profesional">
               Conozcámonos

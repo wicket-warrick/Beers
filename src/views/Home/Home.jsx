@@ -1,13 +1,16 @@
-import "./style.css";
+// import "./Home.scss";
 import photo from "../../img/home.jpg";
+import { Carousel } from "../../components/Carousel/Carousel";
+
 export const Home = () => {
   return (
     <>
-      <section>
-        <header>
-          <h2>a complete catalog about brewdog beer and its world</h2>
-        </header>
-        <p>
+    <section className="container is-flex is-flex-direction-column is-align-items-center ">
+      <div className='column  is-four-fifths content is-medium is-flex is-flex-direction-column '>
+        
+          <h1 className='is-flex is-align-self-center has-text-centered'>A complete catalog about Brewdog  </h1>
+        
+        <p className='has-text-justified ' >
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
           iste quo quibusdam modi. Quis numquam quos architecto iure dolores
           quisquam voluptatem ut, repudiandae voluptas ipsam, vel ea? Alias
@@ -20,38 +23,13 @@ export const Home = () => {
         </p>
 
         <img src={photo} alt="cheers"></img>
+      </div>
       </section>
-      <section>
-        <header>
-          <h2>A little history</h2>
-        </header>
-        <ul>
-          <li>
-            <h3> 2007</h3>
-            <p>
-              Our founders James Watt and Martin Dickie decide they are fed up
-              of the stuffy UK beer market… so, aged just 24, do something about
-              it. Thanks to some very scary bank loans, the guys start making
-              their own hardcore craft beers in Fraserburgh, a town in northeast
-              Scotland. They brew tiny batches, fill bottles by hand, sell their
-              first beers at local markets out of a beaten-up old van… and
-              BrewDog is born.
-            </p>
-          </li>
-          <li>
-            <h3> 2008 THINGS GET… WEIRD </h3>
-            <p>
-              The banks are somehow persuaded to give James and Martin more
-              money… which they use to mastermind the UK's strongest ever beer,
-              Tokyo. The press go bananas, calling it “the downfall of Western
-              civilisation”. The Portman Group (who make the rules for alcohol
-              producers) ban our products. We carry on regardless, start
-              exporting to Sweden, Japan and America and become Scotland's
-              largest independent brewery.
-            </p>
-          </li>
-        </ul>
-      </section>
+  
+
+   <Carousel  />
+   
+
     </>
   );
 };

@@ -1,5 +1,5 @@
-import "./App.css";
-import { Header } from "./components/Header/Header";
+import "./App.scss";
+
 import { Route, Routes } from "react-router-dom";
 import { NavBar } from "./components/NavBar/NavBar";
 import { Home } from "./views/Home/Home";
@@ -9,7 +9,6 @@ import { CatalogueBeer } from "./views/Catalogue/Catalogue";
 function App() {
   return (
     <div className="App">
-      <Header />
       <main>
         <NavBar />
         <Routes>

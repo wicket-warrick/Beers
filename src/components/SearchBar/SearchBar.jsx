@@ -54,8 +54,9 @@ export const SearchBar = ({ params }) => {
           onChange={updateSearchParams}
         ></input>
       </fieldset>
-      <fieldset>
-        <label htmlFor="malt">Malts:</label>
+      <fieldset >
+        <label  htmlFor="malt">Malts:</label>
+        <div class='select'>
         <select
           id="malt"
           name="malt"
@@ -85,10 +86,29 @@ export const SearchBar = ({ params }) => {
           <option value="Smoked Malt">Smoked Malt</option>
           <option value="Acidulated Malt">Acidualted Malt</option>
         </select>
+        </div>
       </fieldset>
-      <fieldset
+      <fieldset  >
+        <label  htmlFor="orderby">Order by:</label>
+      <div class='select is-small'>
+        <select  id='orderby' name='orderby' onChange={(e) => {
+            beerOrder(e.target.value);
+            
+          }}>
+          <option value="">Choose you option...</option>
+          
+          <option value="ibu asc" >Bitterness asc.</option>
+          <option value="ibu desc" >Bitterness desc.</option>
+          <option value="abv asc" >Alcohol asc.</option>
+          <option value="abv desc" >Alcohol desc.</option>
+  
+          </select>
+          </div>
+          </fieldset>
+        {/* <fieldset
         onChange={(e) => {
           beerOrder(e.target.id, e.target.value);
+          console.log(e.target.id, e.target.value)
         }}
       >
         <legend>Order by:</legend>
@@ -100,7 +120,7 @@ export const SearchBar = ({ params }) => {
         <input type="radio" name="orderby" id="abv asc" />
         <label htmlFor="abv desc">Alcohol desc:</label>
         <input type="radio" name="orderby" id="abv desc" />
-      </fieldset>
+      </fieldset> */}
     </form>
   );
 };
